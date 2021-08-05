@@ -1,38 +1,30 @@
-import * as React from "react"
+import * as React from "react";
 import {
   ChakraProvider,
-  Box,
-  Text,
-  Link,
-  VStack,
-  Code,
-  Grid,
-  theme,
-} from "@chakra-ui/react"
-import { ColorModeSwitcher } from "./ColorModeSwitcher"
-import { Logo } from "./Logo"
+  Container,
+  Flex,
+  Heading,
+  CSSReset,
+} from "@chakra-ui/react";
+import Form from "./components/Form/Form";
+import { myTheme } from "./utils/theme";
 
 export const App = () => (
-  <ChakraProvider theme={theme}>
-    <Box textAlign="center" fontSize="xl">
-      <Grid minH="100vh" p={3}>
-        <ColorModeSwitcher justifySelf="flex-end" />
-        <VStack spacing={8}>
-          <Logo h="40vmin" pointerEvents="none" />
-          <Text>
-            Edit <Code fontSize="xl">src/App.tsx</Code> and save to reload.
-          </Text>
-          <Link
-            color="teal.500"
-            href="https://chakra-ui.com"
-            fontSize="2xl"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn Chakra
-          </Link>
-        </VStack>
-      </Grid>
-    </Box>
+  <ChakraProvider theme={myTheme}>
+    <CSSReset />
+    <Container maxW="lg" height="100vh">
+      <Flex
+        alignItems="center"
+        justifyContent="center"
+        flexDirection="column"
+        width="100%"
+        height="100%"
+      >
+        <Heading as="h1" mb="50px">
+          Create your new password
+        </Heading>
+        <Form />
+      </Flex>
+    </Container>
   </ChakraProvider>
-)
+);
