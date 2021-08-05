@@ -2,13 +2,17 @@ import { whiten } from "@chakra-ui/theme-tools";
 
 export const InputStyle = {
   variants: {
-    field: {
-      defaultInput: {
-        outline: "none",
-        p: "5px",
-        borderColor: "gray.100",
-        _hover: { borderColor: "gray.700" },
-        _focus: { borderColor: "gray.700" },
+    flushed: {
+      field: {
+        borderColor: "black",
+        _focus: {
+          borderColor: "blue.500",
+          boxShadow: "none",
+        },
+        _valid: {
+          borderColor: "500",
+          boxShadow: "none",
+        },
       },
     },
   },
@@ -30,6 +34,9 @@ export const ButtonStyle = {
       _hover: {
         bg: whiten("green.500", 20),
         boxShadow: "0px 0px 45px 17px rgba(56, 161, 105, 0.3)",
+        _disabled: {
+          bg: whiten("green.500", 20),
+        },
       },
       _focus: {
         boxShadow: "none",

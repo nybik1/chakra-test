@@ -4,7 +4,6 @@ import {
   FormControl,
   FormLabel,
   Input,
-  FormHelperText,
   Button,
   useToast,
   VStack,
@@ -42,64 +41,35 @@ const Form: React.FC = () => {
         <FormControl>
           <FormLabel>Your old password</FormLabel>
           <Input
+            isInvalid={!!formik.errors.oldPass}
             name="oldPass"
             onChange={formik.handleChange}
             value={formik.values.oldPass}
             type="password"
-            p="5px"
-            borderColor={
-              formik.errors.oldPass || formik.errors.newPass
-                ? "red.500"
-                : "gray.100"
-            }
-            _hover={{ borderColor: "gray.700" }}
-            _focus={{ borderColor: "gray.700" }}
+            variant="flushed"
           />
-          {formik.errors.oldPass && (
-            <FormHelperText color="red.500">
-              {formik.errors.oldPass}
-            </FormHelperText>
-          )}
         </FormControl>
         <FormControl>
           <FormLabel>New password</FormLabel>
           <Input
+            isInvalid={!!formik.errors.newPass || !!formik.errors.confirmPass}
             name="newPass"
             value={formik.values.newPass}
             onChange={formik.handleChange}
             type="password"
-            p="5px"
-            borderColor={
-              formik.errors.confirmPass || formik.errors.newPass
-                ? "red.500"
-                : "gray.100"
-            }
-            _hover={{ borderColor: "gray.700" }}
-            _focus={{ borderColor: "gray.700" }}
+            variant="flushed"
           />
-          {formik.errors.newPass && (
-            <FormHelperText color="red.500">
-              {formik.errors.newPass}
-            </FormHelperText>
-          )}
         </FormControl>
         <FormControl>
           <FormLabel>Confirm new password</FormLabel>
           <Input
+            isInvalid={!!formik.errors.confirmPass}
             name="confirmPass"
             value={formik.values.confirmPass}
             onChange={formik.handleChange}
             type="password"
-            p="5px"
-            borderColor={formik.errors.confirmPass ? "red.500" : "gray.100"}
-            _hover={{ borderColor: "gray.700" }}
-            _focus={{ borderColor: "gray.700" }}
+            variant="flushed"
           />
-          {formik.errors.confirmPass && (
-            <FormHelperText color="red.500">
-              Passwords must match!
-            </FormHelperText>
-          )}
         </FormControl>
         <Button
           isLoading={isLoading}
