@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.js": "/chakra-test/static/js/main.57f7be9b.chunk.js",
-    "main.js.map": "/chakra-test/static/js/main.57f7be9b.chunk.js.map",
+    "main.js": "/chakra-test/static/js/main.bcb04f8c.chunk.js",
+    "main.js.map": "/chakra-test/static/js/main.bcb04f8c.chunk.js.map",
     "runtime-main.js": "/chakra-test/static/js/runtime-main.acf88630.js",
     "runtime-main.js.map": "/chakra-test/static/js/runtime-main.acf88630.js.map",
-    "static/js/2.175f54f5.chunk.js": "/chakra-test/static/js/2.175f54f5.chunk.js",
-    "static/js/2.175f54f5.chunk.js.map": "/chakra-test/static/js/2.175f54f5.chunk.js.map",
+    "static/js/2.de46312a.chunk.js": "/chakra-test/static/js/2.de46312a.chunk.js",
+    "static/js/2.de46312a.chunk.js.map": "/chakra-test/static/js/2.de46312a.chunk.js.map",
     "index.html": "/chakra-test/index.html",
-    "static/js/2.175f54f5.chunk.js.LICENSE.txt": "/chakra-test/static/js/2.175f54f5.chunk.js.LICENSE.txt"
+    "static/js/2.de46312a.chunk.js.LICENSE.txt": "/chakra-test/static/js/2.de46312a.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.acf88630.js",
-    "static/js/2.175f54f5.chunk.js",
-    "static/js/main.57f7be9b.chunk.js"
+    "static/js/2.de46312a.chunk.js",
+    "static/js/main.bcb04f8c.chunk.js"
   ]
 }
