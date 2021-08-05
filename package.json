@@ -2,6 +2,7 @@
   "name": "chakra-test",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://nybik1.github.io/chakra-test/",
   "dependencies": {
     "@chakra-ui/react": "^1.0.0",
     "@emotion/react": "^11.0.0",
@@ -15,6 +16,7 @@
     "@types/react-dom": "^16.9.0",
     "formik": "^2.2.9",
     "framer-motion": "^4.0.0",
+    "gh-pages": "^3.2.3",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-icons": "^3.0.0",
@@ -28,8 +30,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "tsc": "tsc --noEmit"
-    
+    "deploy": "gh-pages -d build",
+    "predeploy": "npm run build"
   },
   "eslintConfig": {
     "extends": "react-app"
